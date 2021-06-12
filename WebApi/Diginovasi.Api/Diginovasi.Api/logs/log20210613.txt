@@ -1,0 +1,65 @@
+2021-06-13 00:36:09.783 +07:00 [INF] Starting web host
+2021-06-13 00:36:11.173 +07:00 [INF] Now listening on: https://localhost:54321
+2021-06-13 00:36:11.176 +07:00 [INF] Now listening on: http://localhost:54322
+2021-06-13 00:36:11.177 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 00:36:11.178 +07:00 [INF] Hosting environment: Development
+2021-06-13 00:36:11.178 +07:00 [INF] Content root path: D:\2021\githubs\Diginovasi-Solutions\WebApi\Diginovasi.Api\Diginovasi.Api
+2021-06-13 00:36:12.137 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/  
+2021-06-13 00:36:12.163 +07:00 [INF] Request finished in 28.0531ms 404 
+2021-06-13 00:36:20.122 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/customers  
+2021-06-13 00:36:20.127 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api)'
+2021-06-13 00:36:20.145 +07:00 [INF] Route matched with {action = "Get", controller = "Customers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Diginovasi.Api.Controllers.CustomersController (Diginovasi.Api).
+2021-06-13 00:36:20.181 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 00:36:20.184 +07:00 [INF] [GET] /customers/
+2021-06-13 00:36:20.188 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.1963ms.
+2021-06-13 00:36:20.193 +07:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 00:36:20.202 +07:00 [INF] Executed action Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api) in 52.1981ms
+2021-06-13 00:36:20.203 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api)'
+2021-06-13 00:36:20.204 +07:00 [INF] Request finished in 82.1975ms 200 application/json; charset=utf-8
+2021-06-13 00:36:20.222 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/favicon.ico  
+2021-06-13 00:36:20.224 +07:00 [INF] Request finished in 1.9443ms 404 
+2021-06-13 00:36:32.890 +07:00 [INF] Application is shutting down...
+2021-06-13 00:39:33.326 +07:00 [INF] Starting web host
+2021-06-13 00:39:34.609 +07:00 [INF] Now listening on: https://localhost:54321
+2021-06-13 00:39:34.612 +07:00 [INF] Now listening on: http://localhost:54322
+2021-06-13 00:39:34.613 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 00:39:34.614 +07:00 [INF] Hosting environment: Development
+2021-06-13 00:39:34.614 +07:00 [INF] Content root path: D:\2021\githubs\Diginovasi-Solutions\WebApi\Diginovasi.Api\Diginovasi.Api
+2021-06-13 00:39:35.671 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/  
+2021-06-13 00:39:35.703 +07:00 [INF] Request finished in 33.7562ms 404 
+2021-06-13 00:39:38.619 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger  
+2021-06-13 00:39:38.621 +07:00 [INF] Request finished in 2.0195ms 301 
+2021-06-13 00:39:38.623 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/index.html  
+2021-06-13 00:39:38.645 +07:00 [INF] Request finished in 22.1831ms 200 text/html;charset=utf-8
+2021-06-13 00:39:38.666 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui.css  
+2021-06-13 00:39:38.667 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-bundle.js  
+2021-06-13 00:39:38.667 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js  
+2021-06-13 00:39:38.684 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-13 00:39:38.684 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 00:39:38.685 +07:00 [INF] Request finished in 18.1816ms 200 application/javascript
+2021-06-13 00:39:38.686 +07:00 [INF] Request finished in 20.0062ms 200 text/css
+2021-06-13 00:39:38.686 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-06-13 00:39:38.688 +07:00 [INF] Request finished in 21.1383ms 200 application/javascript
+2021-06-13 00:39:38.805 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/v1/swagger.json  
+2021-06-13 00:39:38.823 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/favicon-32x32.png  
+2021-06-13 00:39:38.825 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-06-13 00:39:38.826 +07:00 [INF] Request finished in 2.5457ms 200 image/png
+2021-06-13 00:39:38.842 +07:00 [INF] Request finished in 36.5607ms 200 application/json;charset=utf-8
+2021-06-13 00:39:38.868 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 00:39:38.868 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 00:39:38.876 +07:00 [INF] Request finished in 7.6425ms 404 
+2021-06-13 00:39:38.876 +07:00 [INF] Request finished in 7.6426ms 404 
+2021-06-13 00:39:38.883 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 00:39:38.884 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 00:39:38.884 +07:00 [INF] Request finished in 1.1064ms 404 
+2021-06-13 00:39:38.885 +07:00 [INF] Request finished in 0.5842ms 404 
+2021-06-13 00:39:43.629 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/Customers/GetCustomers  
+2021-06-13 00:39:43.633 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api)'
+2021-06-13 00:39:43.651 +07:00 [INF] Route matched with {action = "Get", controller = "Customers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Diginovasi.Api.Controllers.CustomersController (Diginovasi.Api).
+2021-06-13 00:39:43.686 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 00:39:43.690 +07:00 [INF] [GET] /customers/
+2021-06-13 00:39:43.694 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6564ms.
+2021-06-13 00:39:43.698 +07:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 00:39:43.704 +07:00 [INF] Executed action Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api) in 48.8752ms
+2021-06-13 00:39:43.705 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api)'
+2021-06-13 00:39:43.709 +07:00 [INF] Request finished in 80.5256ms 200 application/json; charset=utf-8
