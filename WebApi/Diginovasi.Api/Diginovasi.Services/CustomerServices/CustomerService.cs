@@ -25,7 +25,11 @@ namespace Diginovasi.Services.CustomerServices
         {
             var entity = _mapper.Map<CustomerDto, Customer>(dto);
             _context.Customers.Add(entity);
+            entity.NoCustomer = DateTime.Now.Ticks.ToString("D7");
             bool result = await _context.SaveChangesAsync() > 0;
+            entity.NoCustomer = entity.Id.ToString("D7");
+            _context.Entry(entity).State = EntityState.Modified;
+            result = await _context.SaveChangesAsync() > 0;
             return entity.Id;
         }
         public async Task<int> Update(CustomerDto dto)

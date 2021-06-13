@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Diginovasi.DataTransferObjects.Sales
+namespace Diginovasi.Api.Models.Sales
 {
-    public class SalesOrderDto
+    public class SalesOrderRequest
     {
         public int Id { get; set; }
         public string NoSalesOrder { get; set; }
@@ -11,6 +14,5 @@ namespace Diginovasi.DataTransferObjects.Sales
         public string NoCustomer { get; set; }
         public string NamaCustomer { get; set; }
         public decimal Total { get; set; }
-
     }
 }

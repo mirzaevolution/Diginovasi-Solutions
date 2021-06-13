@@ -7,6 +7,7 @@ using Diginovasi.Services.MaterialServices;
 using Diginovasi.Services.SatuanServices;
 using Diginovasi.Services.CustomerServices;
 using Diginovasi.Services.SalesOrderItemServices;
+using Diginovasi.Services.SalesOrderServices;
 
 namespace Diginovasi.Api
 {
@@ -18,6 +19,7 @@ namespace Diginovasi.Api
             services.AddScoped<IMaterialService, MaterialService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ISalesOrderItemService, SalesOrderItemService>();
+            services.AddScoped<ISalesOrderService, SalesOrderService>();
         }
     }
 }

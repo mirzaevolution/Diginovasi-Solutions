@@ -5,7 +5,6 @@ namespace Diginovasi.Api.Models.Masters
     public class CustomerRequest
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = GlobalConstants.FieldMandatory)]
         public string NoCustomer { get; set; }
         [Required(ErrorMessage = GlobalConstants.FieldMandatory)]
         public string Nama { get; set; }

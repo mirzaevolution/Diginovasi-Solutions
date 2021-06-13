@@ -43,6 +43,8 @@ namespace Diginovasi.Api.Configurations
         private void SalesOrderItemMapping()
         {
             CreateMap<SalesOrderItem, SalesOrderItemDto>()
+                .ForMember(dest => dest.SalesOrderId, src => src.MapFrom(c => c.SalesOrder== null ? 0 : c.SalesOrder.Id))
+                .ForMember(dest => dest.NoSalesOrder, src => src.MapFrom(c => c.SalesOrder == null ? string.Empty : c.SalesOrder.NoSalesOrder))
                 .ForMember(dest => dest.MaterialId, src => src.MapFrom(c => c.Material == null ? 0 : c.Material.Id))
                 .ForMember(dest => dest.DeskripsiMaterial, src => src.MapFrom(c => c.Material == null ? string.Empty : c.Material.Deskripsi))
                 .ForMember(dest => dest.KodeMaterial, src => src.MapFrom(c => c.Material == null ? string.Empty : c.Material.Kode))
@@ -63,6 +65,7 @@ namespace Diginovasi.Api.Configurations
                 .ForMember(dest => dest.NamaCustomer, src => src.MapFrom(c => c.Customer != null ? c.Customer.Nama : string.Empty))
                 .ForMember(dest => dest.Total, src => src.MapFrom(c => c.SalesOrderItems.Sum(i => i.Jumlah * (i.Material!=null ? i.Material.Harga : 1))));
             CreateMap<SalesOrderDto, SalesOrder>();
+            CreateMap<SalesOrderRequest, SalesOrderDto>();
         }
     }
 }

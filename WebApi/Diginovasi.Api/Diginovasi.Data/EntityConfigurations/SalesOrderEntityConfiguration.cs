@@ -12,8 +12,8 @@ namespace Diginovasi.Data.EntityConfigurations
             builder.Property(c => c.Id).UseIdentityColumn();
             builder.Property(c => c.NoSalesOrder).HasMaxLength(20).IsRequired(false).IsUnicode(false);
             builder.HasMany(c => c.SalesOrderItems)
-                .WithOne(c => c.Sales)
-                .HasForeignKey(c => c.SalesId)
+                .WithOne(c => c.SalesOrder)
+                .HasForeignKey(c => c.SalesOrderId)
                 .OnDelete(DeleteBehavior.Cascade);
             builder.ToTable("SalesOrder");
         }

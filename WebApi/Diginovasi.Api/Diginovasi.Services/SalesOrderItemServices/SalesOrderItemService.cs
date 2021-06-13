@@ -47,13 +47,22 @@ namespace Diginovasi.Services.SalesOrderItemServices
         }
         public async Task<IEnumerable<SalesOrderItemDto>> GetAll()
         {
-            var list = await _context.SalesOrderItems.Include(c => c.Material).ThenInclude(c => c.Satuan).ToListAsync();
+            var list = await _context.SalesOrderItems
+                .Include(c => c.SalesOrder)
+                .Include(c => c.Material)
+                .ThenInclude(c => c.Satuan)
+                .ToListAsync();
             var dtoList = _mapper.Map<IEnumerable<SalesOrderItem>, IEnumerable<SalesOrderItemDto>>(list);
             return dtoList;
         }
         public async Task<SalesOrderItemDto> GetById(int id)
         {
-            var entity = await _context.SalesOrderItems.Include(c => c.Material).ThenInclude(c => c.Satuan).FirstOrDefaultAsync(c => c.Id == id);
+            var entity = await _context
+                .SalesOrderItems
+                .Include(c => c.SalesOrder)
+                .Include(c => c.Material)
+                .ThenInclude(c => c.Satuan)
+                .FirstOrDefaultAsync(c => c.Id == id);
             if (entity == null)
                 throw new NullReferenceException($"SalesOrderItem id: `{id}` tidak ditemukan");
             var dto = _mapper.Map<SalesOrderItem, SalesOrderItemDto>(entity);

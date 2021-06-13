@@ -3,6 +3,8 @@
     public class SalesOrderItemDto
     {
         public int Id { get; set; }
+        public int SalesOrderId { get; set; }
+        public string NoSalesOrder { get; set; }
         public int MaterialId { get; set; }
         public string KodeMaterial { get; set; }
         public string DeskripsiMaterial { get; set; }
