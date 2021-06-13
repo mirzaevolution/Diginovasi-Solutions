@@ -1,6 +1,6 @@
-﻿namespace Diginovasi.DataTransferObjects.Sales
+﻿namespace Diginovasi.Api.Models.Sales
 {
-    public class SalesOrderItemDto
+    public class SalesOrderItemRequest
     {
         public int Id { get; set; }
         public int MaterialId { get; set; }

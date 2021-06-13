@@ -4,14 +4,16 @@ using Diginovasi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Diginovasi.Data.Migrations
 {
     [DbContext(typeof(CoreDbContext))]
-    partial class CoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210613103434_ChangeSalesOrderItemEntity")]
+    partial class ChangeSalesOrderItemEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -153,7 +155,7 @@ namespace Diginovasi.Data.Migrations
                     b.Property<int?>("MaterialId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SalesId")
+                    b.Property<int>("SalesId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -192,7 +194,8 @@ namespace Diginovasi.Data.Migrations
                     b.HasOne("Diginovasi.BusinessObjects.Sales.SalesOrder", "Sales")
                         .WithMany("SalesOrderItems")
                         .HasForeignKey("SalesId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

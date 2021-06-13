@@ -8,6 +8,7 @@ using Diginovasi.BusinessObjects.Sales;
 using Diginovasi.DataTransferObjects.Masters;
 using Diginovasi.DataTransferObjects.Sales;
 using Diginovasi.Api.Models.Masters;
+using Diginovasi.Api.Models.Sales;
 
 namespace Diginovasi.Api.Configurations
 {
@@ -28,8 +29,8 @@ namespace Diginovasi.Api.Configurations
         }
         private void MaterialMapping()
         {
-            CreateMap<Material, MaterialDto>().ForMember(dest => dest.Id, 
-                src => src.MapFrom(c => c.Satuan == null ? 0:c.Satuan.Id));
+            CreateMap<Material, MaterialDto>()
+                .ForMember(dest => dest.SatuanId, src => src.MapFrom(c => c.Satuan == null ? 0:c.Satuan.Id));
             CreateMap<MaterialDto, Material>();
             CreateMap<MaterialRequest, MaterialDto>();
 
@@ -42,8 +43,9 @@ namespace Diginovasi.Api.Configurations
         private void SalesOrderItemMapping()
         {
             CreateMap<SalesOrderItem, SalesOrderItemDto>()
+                .ForMember(dest => dest.MaterialId, src => src.MapFrom(c => c.Material == null ? 0 : c.Material.Id))
                 .ForMember(dest => dest.DeskripsiMaterial, src => src.MapFrom(c => c.Material == null ? string.Empty : c.Material.Deskripsi))
-                .ForMember(dest => dest.KodeMaterial, src => src.MapFrom(c => c.KodeMaterial == null ? string.Empty : c.KodeMaterial))
+                .ForMember(dest => dest.KodeMaterial, src => src.MapFrom(c => c.Material == null ? string.Empty : c.Material.Kode))
                 .ForMember(dest => dest.KodeSatuan, src => src.MapFrom(c => c.Material == null ? string.Empty : (c.Material.Satuan == null ? string.Empty : c.Material.Satuan.Kode)))
                 .ForMember(dest => dest.Harga, src => src.MapFrom(c => c.Material == null ? 0 : c.Material.Harga))
                 .ForMember(nameof(SalesOrderItemDto.SubTotal), (entity) =>
@@ -51,6 +53,7 @@ namespace Diginovasi.Api.Configurations
                     entity.MapFrom(src => src.Jumlah * (src.Material != null ? src.Material.Harga : 1));
                 });
             CreateMap<SalesOrderItemDto, SalesOrderItem>();
+            CreateMap<SalesOrderItemRequest, SalesOrderItemDto>();
 
         }
         private void SalesOrderMapping()
