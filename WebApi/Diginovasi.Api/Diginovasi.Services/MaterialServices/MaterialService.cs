@@ -24,7 +24,7 @@ namespace Diginovasi.Services.MaterialServices
         }
         public async Task<int> Add(MaterialDto dto)
         {
-            Satuan satuan = await _context.Satuans.FirstOrDefaultAsync(c => c.Id == dto.SatuanId);
+            Satuan satuan = _context.Satuans.FirstOrDefault(c => c.Id == dto.SatuanId);
             if (satuan == null)
                 throw new NullReferenceException($"Id satuan: `{dto.Id}` tidak ditemukan");
             Material material = _mapper.Map<MaterialDto, Material>(dto);
@@ -35,7 +35,7 @@ namespace Diginovasi.Services.MaterialServices
         }
         public async Task<int> Update(MaterialDto dto)
         {
-            if (await _context.Materials.FirstOrDefaultAsync(c => c.Id == dto.Id) == null)
+            if (_context.Materials.FirstOrDefault(c => c.Id == dto.Id) == null)
             {
                 throw new NullReferenceException($"Material id: `{dto.Id}` tidak ditemukan");
 
@@ -65,7 +65,7 @@ namespace Diginovasi.Services.MaterialServices
         }
         public async Task<bool> Delete(int id)
         {
-            var entity = await _context.Materials.FirstOrDefaultAsync(c => c.Id == id);
+            var entity = _context.Materials.FirstOrDefault(c => c.Id == id);
             if (entity == null)
                 throw new NullReferenceException($"Material id: `{id}` tidak ditemukan");
             _context.Materials.Remove(entity);

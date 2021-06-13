@@ -10,5 +10,6 @@ namespace Diginovasi.DataTransferObjects.Masters
         public int SatuanId { get; set; }
         public decimal Harga { get; set; }
         public string UrlGambar { get; set; }
+        public string FormattedUrlGambar { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace Diginovasi.Services.SalesOrderItemServices
         }
         public async Task<int> Add(SalesOrderItemDto dto)
         {
-            if (await _context.Materials.FirstOrDefaultAsync(c => c.Id == dto.MaterialId) == null)
+            if (_context.Materials.FirstOrDefault(c => c.Id == dto.MaterialId) == null)
             {
                 throw new NullReferenceException($"Material id: `{dto.Id}` tidak ditemukan");
 
@@ -35,7 +35,7 @@ namespace Diginovasi.Services.SalesOrderItemServices
         }
         public async Task<int> Update(SalesOrderItemDto dto)
         {
-            if (await _context.Materials.FirstOrDefaultAsync(c => c.Id == dto.MaterialId) == null)
+            if (_context.Materials.FirstOrDefault(c => c.Id == dto.MaterialId) == null)
             {
                 throw new NullReferenceException($"Material id: `{dto.Id}` tidak ditemukan");
 
@@ -70,7 +70,7 @@ namespace Diginovasi.Services.SalesOrderItemServices
         }
         public async Task<bool> Delete(int id)
         {
-            var entity = await _context.SalesOrderItems.FirstOrDefaultAsync(c => c.Id == id);
+            var entity = _context.SalesOrderItems.FirstOrDefault(c => c.Id == id);
             if (entity == null)
                 throw new NullReferenceException($"SalesOrderItem id: `{id}` tidak ditemukan");
             _context.SalesOrderItems.Remove(entity);

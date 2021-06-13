@@ -30,7 +30,7 @@ namespace Diginovasi.Services.SatuanServices
         }
         public async Task<int> Update(SatuanDto dto)
         {
-            if(await _context.Satuans.FirstOrDefaultAsync(c => c.Id == dto.Id) == null)
+            if(_context.Satuans.FirstOrDefault(c => c.Id == dto.Id) == null)
             {
                 throw new NullReferenceException($"Satuan id: `{dto.Id}` tidak ditemukan");
 
@@ -46,13 +46,13 @@ namespace Diginovasi.Services.SatuanServices
             var dtoList = _mapper.Map<IEnumerable<Satuan>, IEnumerable<SatuanDto>>(list);
             return dtoList;
         }
-        public async Task<SatuanDto> GetById(int id)
+        public Task<SatuanDto> GetById(int id)
         {
-            var entity = await _context.Satuans.FirstOrDefaultAsync(c => c.Id == id);
+            var entity = _context.Satuans.FirstOrDefault(c => c.Id == id);
             if (entity == null)
                 throw new NullReferenceException($"Satuan id: `{id}` tidak ditemukan");
             var dto = _mapper.Map<Satuan, SatuanDto>(entity);
-            return dto;
+            return Task.FromResult(dto);
         }
         public async Task<bool> Delete(int id)
         {

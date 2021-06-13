@@ -15,6 +15,7 @@ import { EditCustomerComponent } from './customer/edit-customer/edit-customer.co
 import { ListMaterialComponent } from './material/list-material/list-material.component';
 import { AddMaterialComponent } from './material/add-material/add-material.component';
 import { EditMaterialComponent } from './material/edit-material/edit-material.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EditMaterialComponent } from './material/edit-material/edit-material.co
     NgbModule,
     DataTablesModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

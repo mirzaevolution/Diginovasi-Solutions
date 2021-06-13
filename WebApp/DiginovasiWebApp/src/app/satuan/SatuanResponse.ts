@@ -12,3 +12,6 @@ export class SatuanBaseResponse extends ObjectBaseResponse{
 export class SatuanDataResponse extends ObjectDataResponse<SatuanObject>{
 
 }
+export class SatuanDataListResponse extends ObjectDataResponse<Array<SatuanObject>>{
+
+}

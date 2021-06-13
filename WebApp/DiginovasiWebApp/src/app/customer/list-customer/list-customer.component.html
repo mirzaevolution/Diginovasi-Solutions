@@ -1,1 +1,18 @@
-<p>list-customer works!</p>
+<h3 class="text-primary"><span class="fa fa-users"></span> List  Customers</h3>
+<div class="row">
+  <div class="col-md-12  my-4">
+    <a class="btn btn-primary" routerLink="/customer/add"><span class="fa fa-plus-circle"></span> Tambah Customer</a>
+  </div>
+  <div class="col-md-12  my-3">
+    <table datatable class="table table-bordered table-hover" [dtOptions]="dtOptions">
+      <thead class="bg-primary">
+        <tr>
+          <th class="text-light">No Customer</th>
+          <th class="text-light">Nama</th>
+          <th class="text-light">No Kontak</th>
+          <th class="text-light">Aksi</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>

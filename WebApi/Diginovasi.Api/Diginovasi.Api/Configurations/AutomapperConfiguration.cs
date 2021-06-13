@@ -30,7 +30,8 @@ namespace Diginovasi.Api.Configurations
         private void MaterialMapping()
         {
             CreateMap<Material, MaterialDto>()
-                .ForMember(dest => dest.SatuanId, src => src.MapFrom(c => c.Satuan == null ? 0:c.Satuan.Id));
+                .ForMember(dest => dest.SatuanId, src => src.MapFrom(c => c.Satuan == null ? 0:c.Satuan.Id))
+                .ForMember(dest => dest.FormattedUrlGambar, src => src.MapFrom(c => GlobalAppScopedHelper.GetUploadedFile(c.UrlGambar)));
             CreateMap<MaterialDto, Material>();
             CreateMap<MaterialRequest, MaterialDto>();
 

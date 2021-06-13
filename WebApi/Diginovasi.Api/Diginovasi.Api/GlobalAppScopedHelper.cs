@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,6 +25,10 @@ namespace Diginovasi.Api
                 file.CopyTo(fs);
             }
             return fullName;
+        }
+        public static string GetUploadedFile(string localUrl)
+        {
+            return $"{localUrl.Replace("\\\\", "/")}";
         }
     }
 }

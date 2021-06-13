@@ -42,6 +42,7 @@ namespace Diginovasi.Api
                 .UseSerilog()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    
                     webBuilder.UseStartup<Startup>();
                 });
     }

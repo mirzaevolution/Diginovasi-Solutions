@@ -1,1 +1,22 @@
-<p>edit-customer works!</p>
+<h3 class="text-primary"><span class="fa fa-edit"></span> Edit Customer</h3>
+<div class="row">
+  <div class="col-md-3">
+    <form #formCustomer [formGroup]="customerForm" (ngSubmit)="submitData()">
+      <div class="form-group">
+        <label class="lead">Masukan Nama Customer</label>
+        <input class="form-control" formControlName="nama" />
+        <span class="text-danger" *ngIf="customerForm.get('noKontak').touched && customerForm.get('noKontak').dirty && customerForm.get('nama').errors?.required">Field 'nama' mandatory</span>
+      </div>
+      <div class="form-group">
+        <label class="lead">Masukan No Kontak</label>
+        <input class="form-control" formControlName="noKontak" />
+        <span class="text-danger" *ngIf="customerForm.get('noKontak').touched && customerForm.get('noKontak').dirty && customerForm.get('noKontak').errors?.required">Field 'no kontak' mandatory</span>
+
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary mr-2" [disabled]="!customerForm.valid">Simpan</button>
+        <a type="button" class="btn btn-danger" routerLink="/customer/list">Kembali</a>
+      </div>
+    </form>
+  </div>
+</div>

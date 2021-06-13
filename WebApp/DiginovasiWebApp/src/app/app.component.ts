@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DiginovasiWebApp';
+  title = 'Diginovasi Solutions';
+  menuCollapse: boolean = true;
+  toggleMenuCollapse(): void{
+    this.menuCollapse = !this.menuCollapse;
+  }
+  closeCollapse(): void{
+      this.menuCollapse = true;
+  }
+  onCollapseChanged():void{
+    console.log(this.menuCollapse);
+  }
 }

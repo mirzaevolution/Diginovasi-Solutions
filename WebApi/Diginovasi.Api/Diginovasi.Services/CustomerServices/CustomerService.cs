@@ -54,13 +54,13 @@ namespace Diginovasi.Services.CustomerServices
             var dtoList = _mapper.Map<IEnumerable<Customer>, IEnumerable<CustomerDto>>(list);
             return dtoList;
         }
-        public async Task<CustomerDto> GetById(int id)
+        public Task<CustomerDto> GetById(int id)
         {
-            var entity = await _context.Customers.FirstOrDefaultAsync(c => c.Id == id);
+            var entity = _context.Customers.FirstOrDefault(c => c.Id == id);
             if (entity == null)
                 throw new NullReferenceException($"Customer id: `{id}` tidak ditemukan");
             var dto = _mapper.Map<Customer, CustomerDto>(entity);
-            return dto;
+            return Task.FromResult(dto);
         }
         public async Task<bool> Delete(int id)
         {

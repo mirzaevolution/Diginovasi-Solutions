@@ -1,1 +1,22 @@
-<p>edit-satuan works!</p>
+<h3 class="text-primary"><span class="fa fa-plus-circle"></span> Edit Satuan</h3>
+<div class="row">
+  <div class="col-md-3">
+    <form #formCustomer [formGroup]="satuanForm" (ngSubmit)="submitData()">
+      <div class="form-group">
+        <label class="lead">Masukan Kode Satuan</label>
+        <input class="form-control" formControlName="kode" />
+        <span class="text-danger" *ngIf="satuanForm.get('kode').touched && satuanForm.get('kode').dirty && satuanForm.get('kode').errors?.required">Field 'kode' mandatory</span>
+      </div>
+      <div class="form-group">
+        <label class="lead">Masukan Deskripsi</label>
+        <input class="form-control" formControlName="deskripsi" />
+        <span class="text-danger" *ngIf="satuanForm.get('deskripsi').touched && satuanForm.get('deskripsi').dirty && satuanForm.get('deskripsi').errors?.required">Field 'deskripsi' mandatory</span>
+
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary mr-2" [disabled]="!satuanForm.valid">Simpan</button>
+        <a type="button" class="btn btn-danger" routerLink="/satuan/list">Kembali</a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -7,7 +7,8 @@ export class MaterialObject{
   public deskripsi: string;
   public satuanId: number;
   public harga: number;
-  public urlGamber: string;
+  public urlGambar: string;
+  public formattedUrlGambar: string;
 }
 export class MaterialBaseResponse extends ObjectBaseResponse { }
 export class MaterialDataResponse extends ObjectDataResponse<MaterialObject> { }

@@ -17,6 +17,8 @@ using Diginovasi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.ResponseCompression;
 using Diginovasi.Api.Filters;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace Diginovasi.Api
 {
@@ -78,7 +80,12 @@ namespace Diginovasi.Api
             });
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Uploads")),
+                RequestPath = "/Uploads"
+            }); 
             app.UseRouting();
             app.UseSwagger();
             app.UseSwaggerUI(config =>
