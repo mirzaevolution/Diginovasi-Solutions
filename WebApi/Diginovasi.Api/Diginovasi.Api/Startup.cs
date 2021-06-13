@@ -13,6 +13,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Swashbuckle.AspNetCore;
+using Diginovasi.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Diginovasi.Api
 {
     public class Startup
@@ -28,6 +31,10 @@ namespace Diginovasi.Api
         {
             services.AddControllers();
             services.AddAutoMapper(typeof(Startup));
+            services.AddDbContext<CoreDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("Default"));
+            });
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo

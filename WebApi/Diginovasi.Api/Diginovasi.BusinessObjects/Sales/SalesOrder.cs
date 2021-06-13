@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Diginovasi.BusinessObjects.Sales
 {
-    public class Sales
+    public class SalesOrder
     {
         public int Id { get; set; }
         public string NoSalesOrder { get; set; }

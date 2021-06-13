@@ -9,9 +9,9 @@ namespace Diginovasi.BusinessObjects.Sales
         public int Jumlah { get; set; }
 
         public int SalesId { get; set; }
-        public virtual Sales Sales { get; set; }
+        public virtual SalesOrder Sales { get; set; }
 
-        public int MaterialId { get; set; }
+        public int? MaterialId { get; set; }
         public virtual Material Material {get;set;}
     }
 }

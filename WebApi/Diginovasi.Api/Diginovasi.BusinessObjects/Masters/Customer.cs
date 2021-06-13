@@ -9,6 +9,6 @@ namespace Diginovasi.BusinessObjects.Masters
         public string NoCustomer { get; set; }
         public string Nama { get; set; }
         public string NoKontak { get; set; }
-        public virtual List<Sales.Sales> Sales { get; set; } = new List<Sales.Sales>();
+        public virtual List<Sales.SalesOrder> SalesOrders { get; set; } = new List<Sales.SalesOrder>();
     }
 }

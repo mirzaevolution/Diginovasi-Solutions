@@ -2,7 +2,7 @@
 
 namespace Diginovasi.DataTransferObjects.Sales
 {
-    public class SalesDto
+    public class SalesOrderDto
     {
         public int Id { get; set; }
         public string NoSalesOrder { get; set; }

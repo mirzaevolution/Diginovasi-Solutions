@@ -6,7 +6,7 @@
         public string KodeMaterial { get; set; }
         public string DeskripsiMaterial { get; set; }
         public int Jumlah { get; set; }
-        public string Satuan { get; set; }
+        public string KodeSatuan { get; set; }
         public decimal Harga { get; set; }
         public decimal SubTotal { get; set; }
     }
