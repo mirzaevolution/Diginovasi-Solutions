@@ -50,7 +50,7 @@ export class ListSalesOrderItemComponent implements OnInit {
           },
           {
             render: function(data:any, type: any, row: SalesOrderItemObject) {
-              return `<button class='btn btn-sm btn-secondary' salesorderitem-edit-id='${row.id}'><span class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' salesorderitem-delete-id='${row.id}' salesorderitem-delete-name='${row.id}'><span class='fa fa-remove'></span> Delete</button>`;
+              return `<button class='btn btn-sm btn-secondary' salesorderitem-edit-id='${row.id}'><span salesorderitem-edit-id='${row.id}' class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' salesorderitem-delete-id='${row.id}' salesorderitem-delete-name='${row.id}'><span salesorderitem-delete-id='${row.id}' salesorderitem-delete-name='${row.id}' class='fa fa-remove'></span> Delete</button>`;
             }
           }
         ]

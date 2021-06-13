@@ -44,7 +44,7 @@ export class ListSalesOrderComponent implements OnInit {
           },
           {
             render: function(data:any, type: any, row: SalesOrderObject) {
-              return `<button class='btn btn-sm btn-secondary' salesorder-edit-id='${row.id}'><span class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' salesorder-delete-id='${row.id}' salesorder-delete-name='${row.noSalesOrder}'><span class='fa fa-remove'></span> Delete</button>`;
+              return `<button class='btn btn-sm btn-secondary' salesorder-edit-id='${row.id}'><span salesorder-edit-id='${row.id}' class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' salesorder-delete-id='${row.id}' salesorder-delete-name='${row.noSalesOrder}'><span salesorder-delete-id='${row.id}' salesorder-delete-name='${row.noSalesOrder}' class='fa fa-remove'></span> Delete</button>`;
             }
           }
         ]

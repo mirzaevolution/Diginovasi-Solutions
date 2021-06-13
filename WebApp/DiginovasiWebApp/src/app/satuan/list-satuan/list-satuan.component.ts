@@ -30,7 +30,7 @@ export class ListSatuanComponent implements OnInit {
           },
           {
             render: function(data:any, type: any, row: SatuanObject) {
-              return `<button class='btn btn-sm btn-secondary' satuan-edit-id='${row.id}'><span class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' satuan-delete-id='${row.id}' satuan-delete-name='${row.kode}'><span class='fa fa-remove'></span> Delete</button>`;
+              return `<button class='btn btn-sm btn-secondary' satuan-edit-id='${row.id}'><span class='fa fa-edit' satuan-edit-id='${row.id}'></span> Edit</button> <button class='btn btn-sm btn-danger' satuan-delete-id='${row.id}' satuan-delete-name='${row.kode}'><span satuan-delete-id='${row.id}' satuan-delete-name='${row.kode}' class='fa fa-remove'></span> Delete</button>`;
             }
           }
         ]

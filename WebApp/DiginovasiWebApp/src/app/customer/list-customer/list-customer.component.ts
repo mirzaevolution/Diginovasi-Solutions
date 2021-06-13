@@ -32,7 +32,7 @@ export class ListCustomerComponent implements OnInit, AfterViewInit {
           },
           {
             render: function(data:any, type: any, row: CustomerObject) {
-              return `<button class='btn btn-sm btn-secondary' customer-edit-id='${row.id}'><span class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' customer-delete-id='${row.id}' customer-delete-name='${row.nama}'><span class='fa fa-remove'></span> Delete</button>`;
+              return `<button class='btn btn-sm btn-secondary' customer-edit-id='${row.id}'><span customer-edit-id='${row.id}' class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' customer-delete-id='${row.id}' customer-delete-name='${row.nama}'><span customer-delete-id='${row.id}' customer-delete-name='${row.nama}' class='fa fa-remove'></span> Delete</button>`;
             }
           }
         ]

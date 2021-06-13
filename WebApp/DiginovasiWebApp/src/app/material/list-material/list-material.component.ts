@@ -37,7 +37,7 @@ export class ListMaterialComponent implements OnInit {
           },
           {
             render: function(data:any, type: any, row: MaterialObject) {
-              return `<button class='btn btn-sm btn-secondary' material-edit-id='${row.id}'><span class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' material-delete-id='${row.id}' material-delete-name='${row.kode}'><span class='fa fa-remove'></span> Delete</button>`;
+              return `<button class='btn btn-sm btn-secondary' material-edit-id='${row.id}'><span material-edit-id='${row.id}' class='fa fa-edit'></span> Edit</button> <button class='btn btn-sm btn-danger' material-delete-id='${row.id}' material-delete-name='${row.kode}'><span material-delete-id='${row.id}' material-delete-name='${row.kode}' class='fa fa-remove'></span> Delete</button>`;
             }
           }
         ]
