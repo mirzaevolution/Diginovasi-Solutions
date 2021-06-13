@@ -2,10 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using Diginovasi.Services.MaterialServices;
+using Diginovasi.Services.SatuanServices;
+using Diginovasi.Services.CustomerServices;
 
-namespace Diginovasi.Api.Configurations
+namespace Diginovasi.Api
 {
-    public class ServicesConfiguration
+    public static class ServicesConfiguration
     {
+        public static void ConfigureServices(this IServiceCollection services)
+        {
+            services.AddScoped<ISatuanService, SatuanService>();
+            services.AddScoped<IMaterialService, MaterialService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+        }
     }
 }

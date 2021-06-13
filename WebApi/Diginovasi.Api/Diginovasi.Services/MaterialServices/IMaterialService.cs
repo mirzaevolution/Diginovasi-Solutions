@@ -10,7 +10,8 @@ namespace Diginovasi.Services.MaterialServices
     {
         Task<int> Add(MaterialDto dto);
         Task<int> Update(MaterialDto dto);
-        Task<IEnumerable<MaterialDto>> GetMaterials();
-        Task<MaterialDto> GetMaterialById(int id);
+        Task<IEnumerable<MaterialDto>> GetAll();
+        Task<MaterialDto> GetById(int id);
+        Task<bool> Delete(int id);
     }
 }

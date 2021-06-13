@@ -7,6 +7,8 @@ using Diginovasi.BusinessObjects.Masters;
 using Diginovasi.BusinessObjects.Sales;
 using Diginovasi.DataTransferObjects.Masters;
 using Diginovasi.DataTransferObjects.Sales;
+using Diginovasi.Api.Models.Masters;
+
 namespace Diginovasi.Api.Configurations
 {
     public class AutomapperConfiguration:Profile
@@ -22,17 +24,20 @@ namespace Diginovasi.Api.Configurations
         private void SatuanMapping()
         {
             CreateMap<Satuan, SatuanDto>().ReverseMap();
+            CreateMap<SatuanRequest, SatuanDto>();
         }
         private void MaterialMapping()
         {
-            CreateMap<Material, MaterialDto>().ForMember(dest => dest.KodeSatuan, 
-                src => src.MapFrom(c => c.Satuan == null ? string.Empty:c.Satuan.Kode));
+            CreateMap<Material, MaterialDto>().ForMember(dest => dest.Id, 
+                src => src.MapFrom(c => c.Satuan == null ? 0:c.Satuan.Id));
             CreateMap<MaterialDto, Material>();
+            CreateMap<MaterialRequest, MaterialDto>();
 
         }
         private void CustomerMapping()
         {
             CreateMap<Customer, CustomerDto>().ReverseMap();
+            CreateMap<CustomerRequest, CustomerDto>();
         }
         private void SalesOrderItemMapping()
         {

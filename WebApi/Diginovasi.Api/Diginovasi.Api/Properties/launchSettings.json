@@ -13,6 +13,7 @@
     "Diginovasi.Api": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "swagger",
       "applicationUrl": "https://localhost:54321;http://localhost:54322",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

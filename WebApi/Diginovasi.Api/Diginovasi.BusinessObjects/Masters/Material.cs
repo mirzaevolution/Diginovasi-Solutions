@@ -12,7 +12,7 @@ namespace Diginovasi.BusinessObjects.Masters
         public decimal Harga { get; set; }
         public string UrlGambar { get; set; }
         public int? SatuanId { get; set; }
-        public virtual Satuan Satuan { get; set; }
-        public virtual List<SalesOrderItem> SalesOrderItems { get; set; } = new List<SalesOrderItem>();
+        public Satuan Satuan { get; set; }
+        public List<SalesOrderItem> SalesOrderItems { get; set; } = new List<SalesOrderItem>();
     }
 }

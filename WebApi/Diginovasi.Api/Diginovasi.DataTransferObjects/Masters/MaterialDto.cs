@@ -7,7 +7,7 @@ namespace Diginovasi.DataTransferObjects.Masters
         public int Id { get; set; }
         public string Kode { get; set; }
         public string Deskripsi { get; set; }
-        public string KodeSatuan { get; set; }
+        public int SatuanId { get; set; }
         public decimal Harga { get; set; }
         public string UrlGambar { get; set; }
     }

@@ -8,6 +8,6 @@ namespace Diginovasi.BusinessObjects.Masters
         public int Id { get; set; }
         public string Kode { get; set; }
         public string Deskripsi { get; set; }
-        public virtual List<Material> Materials { get; set; } = new List<Material>();
+        public List<Material> Materials { get; set; } = new List<Material>();
     }
 }

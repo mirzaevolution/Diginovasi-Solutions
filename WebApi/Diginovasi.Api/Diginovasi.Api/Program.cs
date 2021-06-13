@@ -19,7 +19,7 @@ namespace Diginovasi.Api
                         .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                         .Enrich.FromLogContext()
                        .WriteTo.Console()
-                       .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day,restrictedToMinimumLevel: LogEventLevel.Information)
+                       .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day,restrictedToMinimumLevel: LogEventLevel.Error)
                        .CreateLogger();
 
             try

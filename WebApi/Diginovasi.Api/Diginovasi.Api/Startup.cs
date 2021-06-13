@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using Swashbuckle.AspNetCore;
 using Diginovasi.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.ResponseCompression;
+using Diginovasi.Api.Filters;
 
 namespace Diginovasi.Api
 {
@@ -29,12 +31,13 @@ namespace Diginovasi.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
             services.AddAutoMapper(typeof(Startup));
             services.AddDbContext<CoreDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
+            services.ConfigureServices();
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -42,6 +45,22 @@ namespace Diginovasi.Api
                     Title = "Diginovasi API",
                     Version = "1.0"
                 });
+            });
+            services.AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.Providers.Add<GzipCompressionProvider>();
+            });
+            services.Configure<GzipCompressionProviderOptions>(options =>
+            {
+                options.Level = System.IO.Compression.CompressionLevel.Optimal;
+            });
+            services.AddControllers(options =>
+            {
+                options.Filters.Add<GlobalErrorHandlerFilter>();
+            }).ConfigureApiBehaviorOptions(options=>
+            {
+                options.SuppressModelStateInvalidFilter = true;
             });
         }
 

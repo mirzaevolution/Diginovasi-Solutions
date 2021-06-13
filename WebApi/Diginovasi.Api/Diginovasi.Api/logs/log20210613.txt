@@ -63,3 +63,357 @@
 2021-06-13 00:39:43.704 +07:00 [INF] Executed action Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api) in 48.8752ms
 2021-06-13 00:39:43.705 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.CustomersController.Get (Diginovasi.Api)'
 2021-06-13 00:39:43.709 +07:00 [INF] Request finished in 80.5256ms 200 application/json; charset=utf-8
+2021-06-13 09:31:51.306 +07:00 [INF] Starting web host
+2021-06-13 09:31:53.492 +07:00 [INF] Now listening on: https://localhost:54321
+2021-06-13 09:31:53.498 +07:00 [INF] Now listening on: http://localhost:54322
+2021-06-13 09:31:53.501 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 09:31:53.507 +07:00 [INF] Hosting environment: Development
+2021-06-13 09:31:53.508 +07:00 [INF] Content root path: D:\2021\githubs\Diginovasi-Solutions\WebApi\Diginovasi.Api\Diginovasi.Api
+2021-06-13 09:31:54.642 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/  
+2021-06-13 09:31:54.681 +07:00 [INF] Request finished in 41.1325ms 404 
+2021-06-13 09:32:18.758 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger  
+2021-06-13 09:32:18.760 +07:00 [INF] Request finished in 2.0703ms 301 
+2021-06-13 09:32:18.764 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/index.html  
+2021-06-13 09:32:18.786 +07:00 [INF] Request finished in 21.635ms 200 text/html;charset=utf-8
+2021-06-13 09:32:18.833 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui.css  
+2021-06-13 09:32:18.833 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-bundle.js  
+2021-06-13 09:32:18.833 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js  
+2021-06-13 09:32:18.853 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-13 09:32:18.853 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 09:32:18.853 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-06-13 09:32:18.855 +07:00 [INF] Request finished in 21.8588ms 200 application/javascript
+2021-06-13 09:32:18.855 +07:00 [INF] Request finished in 22.8335ms 200 text/css
+2021-06-13 09:32:18.856 +07:00 [INF] Request finished in 23.6814ms 200 application/javascript
+2021-06-13 09:32:19.005 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/v1/swagger.json  
+2021-06-13 09:32:19.021 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/favicon-32x32.png  
+2021-06-13 09:32:19.023 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-06-13 09:32:19.024 +07:00 [INF] Request finished in 2.8712ms 200 image/png
+2021-06-13 09:32:19.072 +07:00 [INF] Request finished in 66.9133ms 200 application/json;charset=utf-8
+2021-06-13 09:32:38.358 +07:00 [INF] Request starting HTTP/2 POST https://localhost:54321/api/Satuan/Add application/json 56
+2021-06-13 09:32:38.361 +07:00 [INF] CORS policy execution successful.
+2021-06-13 09:32:38.368 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api)'
+2021-06-13 09:32:38.411 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api)'
+2021-06-13 09:32:38.459 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'Diginovasi.Api.Filters.GlobalErrorHandlerFilter'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-06-13 09:32:38.499 +07:00 [INF] Request finished in 141.0218ms 500 text/plain
+2021-06-13 09:33:08.503 +07:00 [INF] Starting web host
+2021-06-13 09:33:09.927 +07:00 [INF] Now listening on: https://localhost:54321
+2021-06-13 09:33:09.930 +07:00 [INF] Now listening on: http://localhost:54322
+2021-06-13 09:33:09.930 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 09:33:09.931 +07:00 [INF] Hosting environment: Development
+2021-06-13 09:33:09.931 +07:00 [INF] Content root path: D:\2021\githubs\Diginovasi-Solutions\WebApi\Diginovasi.Api\Diginovasi.Api
+2021-06-13 09:33:10.909 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/  
+2021-06-13 09:33:10.946 +07:00 [INF] Request finished in 38.5578ms 404 
+2021-06-13 09:33:17.057 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger  
+2021-06-13 09:33:17.059 +07:00 [INF] Request finished in 2.0861ms 301 
+2021-06-13 09:33:17.061 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/index.html  
+2021-06-13 09:33:17.082 +07:00 [INF] Request finished in 21.1482ms 200 text/html;charset=utf-8
+2021-06-13 09:33:17.104 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui.css  
+2021-06-13 09:33:17.104 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-bundle.js  
+2021-06-13 09:33:17.104 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js  
+2021-06-13 09:33:17.122 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-13 09:33:17.122 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 09:33:17.124 +07:00 [INF] Request finished in 19.5085ms 200 application/javascript
+2021-06-13 09:33:17.124 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-06-13 09:33:17.124 +07:00 [INF] Request finished in 20.7363ms 200 text/css
+2021-06-13 09:33:17.126 +07:00 [INF] Request finished in 22.1967ms 200 application/javascript
+2021-06-13 09:33:17.223 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:33:17.230 +07:00 [INF] Request finished in 6.6516ms 404 
+2021-06-13 09:33:17.241 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:33:17.242 +07:00 [INF] Request finished in 0.6932ms 404 
+2021-06-13 09:33:17.528 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:33:17.530 +07:00 [INF] Request finished in 1.8542ms 404 
+2021-06-13 09:33:17.570 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/v1/swagger.json  
+2021-06-13 09:33:17.570 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:33:17.571 +07:00 [INF] Request finished in 1.7063ms 404 
+2021-06-13 09:33:17.624 +07:00 [INF] Request finished in 54.6565ms 200 application/json;charset=utf-8
+2021-06-13 09:33:32.802 +07:00 [INF] Request starting HTTP/2 POST https://localhost:54321/api/Satuan/Add application/json 56
+2021-06-13 09:33:32.806 +07:00 [INF] CORS policy execution successful.
+2021-06-13 09:33:32.812 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api)'
+2021-06-13 09:33:32.863 +07:00 [INF] Route matched with {action = "Add", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Diginovasi.Api.Models.Masters.SatuanRequest) on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:33:33.206 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:33:40.971 +07:00 [WRN] No type was specified for the decimal column 'Harga' on entity type 'Material'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2021-06-13 09:33:40.999 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:33:42.178 +07:00 [INF] Executed DbCommand (47ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Satuan] ([Deskripsi], [Kode])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Satuan]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-06-13 09:33:49.648 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16435.6733ms.
+2021-06-13 09:33:49.656 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 09:33:49.663 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api) in 16794.7335ms
+2021-06-13 09:33:49.666 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api)'
+2021-06-13 09:33:49.670 +07:00 [INF] Request finished in 16868.5289ms 200 application/json; charset=utf-8
+2021-06-13 09:34:33.325 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/Satuan/GetAll  
+2021-06-13 09:34:33.328 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:34:33.331 +07:00 [INF] Route matched with {action = "GetAll", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:34:33.343 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:34:35.670 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:34:35.787 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+2021-06-13 09:34:38.010 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4665.6214ms.
+2021-06-13 09:34:38.012 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[System.Collections.Generic.IEnumerable`1[[Diginovasi.DataTransferObjects.Masters.SatuanDto, Diginovasi.DataTransferObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 09:34:38.016 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) in 4682.6856ms
+2021-06-13 09:34:38.017 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:34:38.018 +07:00 [INF] Request finished in 4693.4763ms 200 application/json; charset=utf-8
+2021-06-13 09:34:45.879 +07:00 [INF] Request starting HTTP/2 PUT https://localhost:54321/api/Satuan/Update application/json 56
+2021-06-13 09:34:45.880 +07:00 [INF] CORS policy execution successful.
+2021-06-13 09:34:45.880 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api)'
+2021-06-13 09:34:45.885 +07:00 [INF] Route matched with {action = "Update", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Diginovasi.Api.Models.Masters.SatuanRequest) on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:34:45.899 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:34:50.123 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:34:50.777 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Satuan] SET [Deskripsi] = @p0, [Kode] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+2021-06-13 09:34:57.258 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11357.0073ms.
+2021-06-13 09:34:57.261 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 09:34:57.262 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api) in 11375.6893ms
+2021-06-13 09:34:57.263 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api)'
+2021-06-13 09:34:57.264 +07:00 [INF] Request finished in 11385.8112ms 200 application/json; charset=utf-8
+2021-06-13 09:35:01.172 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/Satuan/GetAll  
+2021-06-13 09:35:01.173 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:35:01.175 +07:00 [INF] Route matched with {action = "GetAll", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:35:01.188 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:35:03.074 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:35:03.077 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+2021-06-13 09:35:03.080 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1890.0977ms.
+2021-06-13 09:35:03.081 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[System.Collections.Generic.IEnumerable`1[[Diginovasi.DataTransferObjects.Masters.SatuanDto, Diginovasi.DataTransferObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 09:35:03.083 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) in 1906.4615ms
+2021-06-13 09:35:03.084 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:35:03.085 +07:00 [INF] Request finished in 1912.8896ms 200 application/json; charset=utf-8
+2021-06-13 09:43:35.527 +07:00 [INF] Starting web host
+2021-06-13 09:43:36.975 +07:00 [INF] Now listening on: https://localhost:54321
+2021-06-13 09:43:36.979 +07:00 [INF] Now listening on: http://localhost:54322
+2021-06-13 09:43:36.980 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 09:43:36.980 +07:00 [INF] Hosting environment: Development
+2021-06-13 09:43:36.981 +07:00 [INF] Content root path: D:\2021\githubs\Diginovasi-Solutions\WebApi\Diginovasi.Api\Diginovasi.Api
+2021-06-13 09:43:37.898 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/  
+2021-06-13 09:43:37.933 +07:00 [INF] Request finished in 36.9445ms 404 
+2021-06-13 09:43:40.720 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger  
+2021-06-13 09:43:40.722 +07:00 [INF] Request finished in 2.5913ms 301 
+2021-06-13 09:43:40.725 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/index.html  
+2021-06-13 09:43:40.747 +07:00 [INF] Request finished in 22.1259ms 200 text/html;charset=utf-8
+2021-06-13 09:43:40.812 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui.css  
+2021-06-13 09:43:40.812 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-bundle.js  
+2021-06-13 09:43:40.812 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js  
+2021-06-13 09:43:40.834 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-13 09:43:40.834 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 09:43:40.836 +07:00 [INF] Request finished in 23.2471ms 200 application/javascript
+2021-06-13 09:43:40.837 +07:00 [INF] Request finished in 25.0154ms 200 text/css
+2021-06-13 09:43:40.839 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-06-13 09:43:40.842 +07:00 [INF] Request finished in 30.1993ms 200 application/javascript
+2021-06-13 09:43:40.938 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:43:40.944 +07:00 [INF] Request finished in 6.6313ms 404 
+2021-06-13 09:43:40.955 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:43:40.956 +07:00 [INF] Request finished in 0.7242ms 404 
+2021-06-13 09:43:41.110 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:43:41.111 +07:00 [INF] Request finished in 0.9243ms 404 
+2021-06-13 09:43:41.130 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:43:41.151 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/v1/swagger.json  
+2021-06-13 09:43:41.151 +07:00 [INF] Request finished in 20.6915ms 404 
+2021-06-13 09:43:41.211 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Diginovasi.Api.Controllers.BaseApiController.ConstructMessage (Diginovasi.Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-06-13 09:43:41.242 +07:00 [INF] Request finished in 90.9729ms 500 text/plain
+2021-06-13 09:44:33.648 +07:00 [INF] Starting web host
+2021-06-13 09:44:35.106 +07:00 [INF] Now listening on: https://localhost:54321
+2021-06-13 09:44:35.109 +07:00 [INF] Now listening on: http://localhost:54322
+2021-06-13 09:44:35.109 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 09:44:35.110 +07:00 [INF] Hosting environment: Development
+2021-06-13 09:44:35.110 +07:00 [INF] Content root path: D:\2021\githubs\Diginovasi-Solutions\WebApi\Diginovasi.Api\Diginovasi.Api
+2021-06-13 09:44:36.060 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/  
+2021-06-13 09:44:36.093 +07:00 [INF] Request finished in 35.0862ms 404 
+2021-06-13 09:44:38.377 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger  
+2021-06-13 09:44:38.379 +07:00 [INF] Request finished in 2.1411ms 301 
+2021-06-13 09:44:38.381 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/index.html  
+2021-06-13 09:44:38.403 +07:00 [INF] Request finished in 21.7242ms 200 text/html;charset=utf-8
+2021-06-13 09:44:38.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui.css  
+2021-06-13 09:44:38.424 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-bundle.js  
+2021-06-13 09:44:38.424 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js  
+2021-06-13 09:44:38.440 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-13 09:44:38.440 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 09:44:38.440 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-06-13 09:44:38.441 +07:00 [INF] Request finished in 16.7122ms 200 application/javascript
+2021-06-13 09:44:38.442 +07:00 [INF] Request finished in 19.3285ms 200 text/css
+2021-06-13 09:44:38.443 +07:00 [INF] Request finished in 18.6568ms 200 application/javascript
+2021-06-13 09:44:38.645 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:44:38.653 +07:00 [INF] Request finished in 7.5414ms 404 
+2021-06-13 09:44:38.699 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:44:38.700 +07:00 [INF] Request finished in 0.8827ms 404 
+2021-06-13 09:44:38.740 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:44:38.741 +07:00 [INF] Request finished in 0.8002ms 404 
+2021-06-13 09:44:38.776 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/v1/swagger.json  
+2021-06-13 09:44:38.777 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:44:38.778 +07:00 [INF] Request finished in 0.633ms 404 
+2021-06-13 09:44:38.828 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Diginovasi.Api.Controllers.BaseApiController.ConstructMessage (Diginovasi.Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-06-13 09:44:38.859 +07:00 [INF] Request finished in 82.7451ms 500 text/plain
+2021-06-13 09:45:11.568 +07:00 [INF] Starting web host
+2021-06-13 09:45:12.987 +07:00 [INF] Now listening on: https://localhost:54321
+2021-06-13 09:45:12.991 +07:00 [INF] Now listening on: http://localhost:54322
+2021-06-13 09:45:12.991 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 09:45:12.992 +07:00 [INF] Hosting environment: Development
+2021-06-13 09:45:12.992 +07:00 [INF] Content root path: D:\2021\githubs\Diginovasi-Solutions\WebApi\Diginovasi.Api\Diginovasi.Api
+2021-06-13 09:45:13.953 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/  
+2021-06-13 09:45:13.987 +07:00 [INF] Request finished in 35.4637ms 404 
+2021-06-13 09:45:16.187 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger  
+2021-06-13 09:45:16.194 +07:00 [INF] Request finished in 6.8454ms 301 
+2021-06-13 09:45:16.197 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/index.html  
+2021-06-13 09:45:16.219 +07:00 [INF] Request finished in 21.7779ms 200 text/html;charset=utf-8
+2021-06-13 09:45:16.239 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui.css  
+2021-06-13 09:45:16.241 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-bundle.js  
+2021-06-13 09:45:16.241 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js  
+2021-06-13 09:45:16.263 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-06-13 09:45:16.263 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-13 09:45:16.263 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 09:45:16.264 +07:00 [INF] Request finished in 23.8433ms 200 application/javascript
+2021-06-13 09:45:16.265 +07:00 [INF] Request finished in 24.3748ms 200 application/javascript
+2021-06-13 09:45:16.266 +07:00 [INF] Request finished in 26.8308ms 200 text/css
+2021-06-13 09:45:16.411 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:45:16.418 +07:00 [INF] Request finished in 6.5017ms 404 
+2021-06-13 09:45:16.429 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-bundle.js.map  
+2021-06-13 09:45:16.430 +07:00 [INF] Request finished in 0.7489ms 404 
+2021-06-13 09:45:16.527 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:45:16.527 +07:00 [INF] Request finished in 0.8128ms 404 
+2021-06-13 09:45:16.553 +07:00 [INF] Request starting HTTP/1.1 GET https://127.0.0.1:54321/swagger/swagger-ui-standalone-preset.js.map  
+2021-06-13 09:45:16.561 +07:00 [INF] Request finished in 7.7336ms 404 
+2021-06-13 09:45:16.590 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/swagger/v1/swagger.json  
+2021-06-13 09:45:16.655 +07:00 [INF] Request finished in 75.8202ms 200 application/json;charset=utf-8
+2021-06-13 09:45:25.895 +07:00 [INF] Request starting HTTP/2 PUT https://localhost:54321/api/Satuan/Update application/json 58
+2021-06-13 09:45:25.898 +07:00 [INF] CORS policy execution successful.
+2021-06-13 09:45:25.904 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api)'
+2021-06-13 09:45:25.932 +07:00 [INF] Route matched with {action = "Update", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Diginovasi.Api.Models.Masters.SatuanRequest) on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:45:26.197 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:45:28.852 +07:00 [WRN] No type was specified for the decimal column 'Harga' on entity type 'Material'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2021-06-13 09:45:28.879 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:45:29.274 +07:00 [INF] Executed DbCommand (41ms) [Parameters=[@__dto_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+WHERE [s].[Id] = @__dto_Id_0
+2021-06-13 09:45:36.701 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.BaseResponse'.
+2021-06-13 09:45:36.708 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api) in 10771.6531ms
+2021-06-13 09:45:36.710 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.Update (Diginovasi.Api)'
+2021-06-13 09:45:36.714 +07:00 [INF] Request finished in 10819.3881ms 200 application/json; charset=utf-8
+2021-06-13 09:46:01.781 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/Satuan/GetById/1  
+2021-06-13 09:46:01.784 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api)'
+2021-06-13 09:46:01.790 +07:00 [INF] Route matched with {action = "GetById", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:46:01.804 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:46:03.984 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:46:03.995 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+WHERE [s].[Id] = @__id_0
+2021-06-13 09:46:04.038 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2229.8087ms.
+2021-06-13 09:46:04.041 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[Diginovasi.DataTransferObjects.Masters.SatuanDto, Diginovasi.DataTransferObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-13 09:46:04.044 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api) in 2251.6605ms
+2021-06-13 09:46:04.045 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api)'
+2021-06-13 09:46:04.046 +07:00 [INF] Request finished in 2264.7714ms 200 application/json; charset=utf-8
+2021-06-13 09:46:33.844 +07:00 [INF] Request starting HTTP/2 POST https://localhost:54321/api/Satuan/Add application/json 54
+2021-06-13 09:46:33.845 +07:00 [INF] CORS policy execution successful.
+2021-06-13 09:46:33.847 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api)'
+2021-06-13 09:46:33.853 +07:00 [INF] Route matched with {action = "Add", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Diginovasi.Api.Models.Masters.SatuanRequest) on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:46:33.868 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:46:35.291 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:46:35.372 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Satuan] ([Deskripsi], [Kode])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Satuan]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-06-13 09:46:35.410 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1540.792ms.
+2021-06-13 09:46:35.412 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 09:46:35.414 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api) in 1559.5687ms
+2021-06-13 09:46:35.415 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.Add (Diginovasi.Api)'
+2021-06-13 09:46:35.416 +07:00 [INF] Request finished in 1573.3842ms 200 application/json; charset=utf-8
+2021-06-13 09:46:45.016 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/Satuan/GetAll  
+2021-06-13 09:46:45.018 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:46:45.022 +07:00 [INF] Route matched with {action = "GetAll", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:46:45.038 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:46:46.767 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:46:46.774 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+2021-06-13 09:46:46.786 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1746.3242ms.
+2021-06-13 09:46:46.789 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[System.Collections.Generic.IEnumerable`1[[Diginovasi.DataTransferObjects.Masters.SatuanDto, Diginovasi.DataTransferObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 09:46:46.793 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) in 1765.5159ms
+2021-06-13 09:46:46.794 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:46:46.795 +07:00 [INF] Request finished in 1778.6149ms 200 application/json; charset=utf-8
+2021-06-13 09:47:04.035 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:54321/api/Satuan/Delete/2  
+2021-06-13 09:47:04.037 +07:00 [INF] CORS policy execution successful.
+2021-06-13 09:47:04.038 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.Delete (Diginovasi.Api)'
+2021-06-13 09:47:04.044 +07:00 [INF] Route matched with {action = "Delete", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:47:04.058 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.Delete (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:47:06.574 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:47:06.595 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+WHERE [s].[Id] = @__id_0
+2021-06-13 09:47:08.450 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Satuan]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2021-06-13 09:47:14.346 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.Delete (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10281.5408ms.
+2021-06-13 09:47:14.350 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.BaseResponse'.
+2021-06-13 09:47:14.351 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.Delete (Diginovasi.Api) in 10305.3154ms
+2021-06-13 09:47:14.352 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.Delete (Diginovasi.Api)'
+2021-06-13 09:47:14.354 +07:00 [INF] Request finished in 10318.6889ms 200 application/json; charset=utf-8
+2021-06-13 09:47:18.987 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/Satuan/GetById/2  
+2021-06-13 09:47:18.989 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api)'
+2021-06-13 09:47:18.991 +07:00 [INF] Route matched with {action = "GetById", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:47:19.008 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:47:20.307 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:47:20.311 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+WHERE [s].[Id] = @__id_0
+2021-06-13 09:47:26.355 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.BaseResponse'.
+2021-06-13 09:47:26.357 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api) in 7360.8831ms
+2021-06-13 09:47:26.358 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.GetById (Diginovasi.Api)'
+2021-06-13 09:47:26.359 +07:00 [INF] Request finished in 7372.8003ms 200 application/json; charset=utf-8
+2021-06-13 09:47:33.305 +07:00 [INF] Request starting HTTP/2 GET https://localhost:54321/api/Satuan/GetAll  
+2021-06-13 09:47:33.306 +07:00 [INF] Executing endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:47:33.308 +07:00 [INF] Route matched with {action = "GetAll", controller = "Satuan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Diginovasi.Api.Controllers.SatuanController (Diginovasi.Api).
+2021-06-13 09:47:33.322 +07:00 [INF] Executing action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) - Validation state: "Valid"
+2021-06-13 09:47:34.434 +07:00 [INF] Entity Framework Core 3.1.16 initialized 'CoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 09:47:34.439 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Deskripsi], [s].[Kode]
+FROM [Satuan] AS [s]
+2021-06-13 09:47:34.441 +07:00 [INF] Executed action method Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1117.6532ms.
+2021-06-13 09:47:34.444 +07:00 [INF] Executing ObjectResult, writing value of type 'Diginovasi.Api.Models.Response`1[[System.Collections.Generic.IEnumerable`1[[Diginovasi.DataTransferObjects.Masters.SatuanDto, Diginovasi.DataTransferObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-13 09:47:34.446 +07:00 [INF] Executed action Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api) in 1135.1577ms
+2021-06-13 09:47:34.447 +07:00 [INF] Executed endpoint 'Diginovasi.Api.Controllers.SatuanController.GetAll (Diginovasi.Api)'
+2021-06-13 09:47:34.448 +07:00 [INF] Request finished in 1143.3278ms 200 application/json; charset=utf-8

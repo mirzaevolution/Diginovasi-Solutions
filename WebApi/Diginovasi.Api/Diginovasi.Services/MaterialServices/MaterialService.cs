@@ -24,9 +24,9 @@ namespace Diginovasi.Services.MaterialServices
         }
         public async Task<int> Add(MaterialDto dto)
         {
-            Satuan satuan = await _context.Satuans.FirstOrDefaultAsync(c => c.Kode == dto.KodeSatuan);
+            Satuan satuan = await _context.Satuans.FirstOrDefaultAsync(c => c.Id == dto.Id);
             if (satuan == null)
-                throw new NullReferenceException($"Kode satuan: `{dto.KodeSatuan}` tidak ditemukan");
+                throw new NullReferenceException($"Id satuan: `{dto.Id}` tidak ditemukan");
             Material material = _mapper.Map<MaterialDto, Material>(dto);
             material.SatuanId = satuan.Id;
             _context.Materials.Add(material);
@@ -35,28 +35,41 @@ namespace Diginovasi.Services.MaterialServices
         }
         public async Task<int> Update(MaterialDto dto)
         {
-            Satuan satuan = await _context.Satuans.FirstOrDefaultAsync(c => c.Kode == dto.KodeSatuan);
+            if (await _context.Materials.FirstOrDefaultAsync(c => c.Id == dto.Id) == null)
+            {
+                throw new NullReferenceException($"Material id: `{dto.Id}` tidak ditemukan");
+
+            }
+            Satuan satuan = await _context.Satuans.FirstOrDefaultAsync(c => c.Id == dto.Id);
             if (satuan == null)
-                throw new NullReferenceException($"Kode satuan: `{dto.KodeSatuan}` tidak ditemukan");
+                throw new NullReferenceException($"Id satuan: `{dto.Id}` tidak ditemukan");
             Material material = _mapper.Map<MaterialDto, Material>(dto);
             material.SatuanId = satuan.Id;
             _context.Materials.Update(material);
             bool result = await _context.SaveChangesAsync() > 0;
             return material.Id;
         }
-        public async Task<IEnumerable<MaterialDto>> GetMaterials()
+        public async Task<IEnumerable<MaterialDto>> GetAll()
         {
-            var list = await _context.Materials.ToListAsync();
-            var dtoLis = _mapper.Map<IEnumerable<Material>, IEnumerable<MaterialDto>>(list);
-            return dtoLis;
+            var list = await _context.Materials.Include(c => c.Satuan).ToListAsync();
+            var dtoList = _mapper.Map<IEnumerable<Material>, IEnumerable<MaterialDto>>(list);
+            return dtoList;
         }
-        public async Task<MaterialDto> GetMaterialById(int id)
+        public async Task<MaterialDto> GetById(int id)
         {
-            var entity = await _context.Materials.FirstOrDefaultAsync(c => c.Id == id);
+            var entity = await _context.Materials.Include(c => c.Satuan).FirstOrDefaultAsync(c => c.Id == id);
             if (entity == null)
                 throw new NullReferenceException($"Material id: `{id}` tidak ditemukan");
             var dto = _mapper.Map<Material, MaterialDto>(entity);
             return dto;
+        }
+        public async Task<bool> Delete(int id)
+        {
+            var entity = await _context.Materials.FirstOrDefaultAsync(c => c.Id == id);
+            if (entity == null)
+                throw new NullReferenceException($"Material id: `{id}` tidak ditemukan");
+            _context.Materials.Remove(entity);
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }
