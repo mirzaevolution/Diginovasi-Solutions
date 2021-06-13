@@ -12,6 +12,9 @@ import { ListSalesOrderComponent } from './sales-order/list-sales-order/list-sal
 import { AddSatuanComponent } from './satuan/add-satuan/add-satuan.component';
 import { EditSatuanComponent } from './satuan/edit-satuan/edit-satuan.component';
 import { ListSatuanComponent } from './satuan/list-satuan/list-satuan.component';
+import { ListSalesOrderItemComponent } from './sales-order-item/list-sales-order-item/list-sales-order-item/list-sales-order-item.component';
+import { AddSalesOrderItemComponent } from './sales-order-item/add-sales-order-item/add-sales-order-item/add-sales-order-item.component';
+import { EditSalesOrderItemComponent } from './sales-order-item/edit-sales-order-item/edit-sales-order-item/edit-sales-order-item.component';
 
 const routes: Routes = [
   { path: "customer/list", component:ListCustomerComponent },
@@ -29,6 +32,10 @@ const routes: Routes = [
   { path: "sales-order/list", component: ListSalesOrderComponent },
   { path: "sales-order/add", component: AddSalesOrderComponent },
   { path: "sales-order/edit/:id", component: EditSalesOrderComponent},
+
+  { path: "sales-order-item/list", component: ListSalesOrderItemComponent },
+  { path: "sales-order-item/add", component: AddSalesOrderItemComponent },
+  { path: "sales-order-item/edit/:id", component: EditSalesOrderItemComponent},
 
   { path: "", component: ListCustomerComponent}
 ];

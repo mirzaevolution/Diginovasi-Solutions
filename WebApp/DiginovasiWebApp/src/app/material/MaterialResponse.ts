@@ -12,3 +12,5 @@ export class MaterialObject{
 }
 export class MaterialBaseResponse extends ObjectBaseResponse { }
 export class MaterialDataResponse extends ObjectDataResponse<MaterialObject> { }
+export class MaterialDataListResponse extends ObjectDataResponse<Array<MaterialObject>> { }
+

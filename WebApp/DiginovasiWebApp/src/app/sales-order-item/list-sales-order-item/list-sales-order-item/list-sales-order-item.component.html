@@ -1,0 +1,24 @@
+<h3 class="text-primary"> List Sales Order Item</h3>
+<div class="row">
+  <div class="col-md-12  my-4">
+    <a class="btn btn-primary" routerLink="/sales-order-item/add"><span class="fa fa-plus-circle"></span> Tambah Sales Order Item</a>
+  </div>
+  <div class="col-md-12  my-3">
+    <table datatable class="table table-bordered table-hover nowrap" [dtOptions]="dtOptions" style="width: 100%;">
+      <thead class="bg-primary">
+        <tr>
+          <th class="text-light">No</th>
+          <th class="text-light">No Sales Order</th>
+          <th class="text-light">Kode Material</th>
+          <th class="text-light">Deskripsi Material</th>
+          <th class="text-light">Jumlah</th>
+          <th class="text-light">Harga</th>
+          <th class="text-light">SubTotal</th>
+          <th class="text-light">Kode Satuan</th>
+          <th class="text-light">Aksi</th>
+
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>

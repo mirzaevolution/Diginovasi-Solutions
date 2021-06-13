@@ -19,6 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddSalesOrderComponent } from './sales-order/add-sales-order/add-sales-order/add-sales-order.component';
 import { EditSalesOrderComponent } from './sales-order/edit-sales-order/edit-sales-order/edit-sales-order.component';
 import { ListSalesOrderComponent } from './sales-order/list-sales-order/list-sales-order/list-sales-order.component';
+import { ListSalesOrderItemComponent } from './sales-order-item/list-sales-order-item/list-sales-order-item/list-sales-order-item.component';
+import { AddSalesOrderItemComponent } from './sales-order-item/add-sales-order-item/add-sales-order-item/add-sales-order-item.component';
+import { EditSalesOrderItemComponent } from './sales-order-item/edit-sales-order-item/edit-sales-order-item/edit-sales-order-item.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { ListSalesOrderComponent } from './sales-order/list-sales-order/list-sal
     EditMaterialComponent,
     AddSalesOrderComponent,
     EditSalesOrderComponent,
-    ListSalesOrderComponent
+    ListSalesOrderComponent,
+    ListSalesOrderItemComponent,
+    AddSalesOrderItemComponent,
+    EditSalesOrderItemComponent
   ],
   imports: [
     BrowserModule,
