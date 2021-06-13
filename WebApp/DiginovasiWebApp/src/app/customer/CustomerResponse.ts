@@ -9,3 +9,5 @@ export class CustomerObject{
 }
 export class CustomerBaseResponse extends ObjectBaseResponse { }
 export class CustomerDataResponse extends ObjectDataResponse<CustomerObject> { }
+export class CustomerDataListResponse extends ObjectDataResponse<Array<CustomerObject>> { }
+

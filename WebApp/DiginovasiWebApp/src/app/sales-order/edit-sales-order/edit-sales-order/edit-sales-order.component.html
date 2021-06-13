@@ -1,0 +1,22 @@
+<h3 class="text-primary"><span class="fa fa-edit"></span> Edit Sales Order</h3>
+<div class="row">
+  <div class="col-md-6">
+    <form [formGroup]="salesOrderForm" (ngSubmit)="submitData()">
+      <div class="form-group">
+        <label class="lead">Masukan Tanggal</label>
+        <input #datePicker="ngbDatepicker" class="form-control" formControlName="tanggalStruct"
+              ngbDatepicker (click)="datePicker.toggle()"/>
+      </div>
+      <div class="form-group">
+        <label class="lead">Pilih Customer</label>
+        <select class="form-control" formControlName="customerId">
+          <option *ngFor="let item of listCustomer" [value]="item.id">{{item.noCustomer}} - {{item.nama}} - {{item.noKontak}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary mr-2" [disabled]="!salesOrderForm.valid">Simpan</button>
+        <a type="button" class="btn btn-danger" routerLink="/sales-order/list">Kembali</a>
+      </div>
+    </form>
+  </div>
+</div>

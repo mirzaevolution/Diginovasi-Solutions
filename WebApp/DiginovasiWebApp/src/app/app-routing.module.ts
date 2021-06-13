@@ -1,3 +1,4 @@
+import { EditSalesOrderComponent } from './sales-order/edit-sales-order/edit-sales-order/edit-sales-order.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCustomerComponent } from './customer/add-customer/add-customer.component';
@@ -6,6 +7,8 @@ import { ListCustomerComponent } from './customer/list-customer/list-customer.co
 import { AddMaterialComponent } from './material/add-material/add-material.component';
 import { EditMaterialComponent } from './material/edit-material/edit-material.component';
 import { ListMaterialComponent } from './material/list-material/list-material.component';
+import { AddSalesOrderComponent } from './sales-order/add-sales-order/add-sales-order/add-sales-order.component';
+import { ListSalesOrderComponent } from './sales-order/list-sales-order/list-sales-order/list-sales-order.component';
 import { AddSatuanComponent } from './satuan/add-satuan/add-satuan.component';
 import { EditSatuanComponent } from './satuan/edit-satuan/edit-satuan.component';
 import { ListSatuanComponent } from './satuan/list-satuan/list-satuan.component';
@@ -22,6 +25,10 @@ const routes: Routes = [
   { path: "material/list", component: ListMaterialComponent },
   { path: "material/add", component: AddMaterialComponent },
   { path: "material/edit/:id", component: EditMaterialComponent},
+
+  { path: "sales-order/list", component: ListSalesOrderComponent },
+  { path: "sales-order/add", component: AddSalesOrderComponent },
+  { path: "sales-order/edit/:id", component: EditSalesOrderComponent},
 
   { path: "", component: ListCustomerComponent}
 ];

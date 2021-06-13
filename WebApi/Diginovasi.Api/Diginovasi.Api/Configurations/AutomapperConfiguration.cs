@@ -62,11 +62,19 @@ namespace Diginovasi.Api.Configurations
         private void SalesOrderMapping()
         {
             CreateMap<SalesOrder, SalesOrderDto>()
+                .ForMember(dest => dest.TanggalStruct, src => src.MapFrom(c => new TanggalStructDto
+                {
+                    Year = c.Tanggal.Year,
+                    Month = c.Tanggal.Month,
+                    Day = c.Tanggal.Day
+                }))
                 .ForMember(dest => dest.NoCustomer, src => src.MapFrom(c => c.Customer != null ? c.Customer.NoCustomer : string.Empty))
                 .ForMember(dest => dest.NamaCustomer, src => src.MapFrom(c => c.Customer != null ? c.Customer.Nama : string.Empty))
                 .ForMember(dest => dest.Total, src => src.MapFrom(c => c.SalesOrderItems.Sum(i => i.Jumlah * (i.Material!=null ? i.Material.Harga : 1))));
             CreateMap<SalesOrderDto, SalesOrder>();
-            CreateMap<SalesOrderRequest, SalesOrderDto>();
+            CreateMap<SalesOrderRequest, SalesOrderDto>()
+                .ForMember(dest => dest.Tanggal, src => src.MapFrom(c => new DateTime(c.TanggalStruct.Year, c.TanggalStruct.Month, c.TanggalStruct.Day)));
+            CreateMap<TanggalStructDto, TanggalStructRequest>().ReverseMap();
         }
     }
 }

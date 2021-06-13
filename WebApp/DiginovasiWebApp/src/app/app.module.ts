@@ -16,6 +16,9 @@ import { ListMaterialComponent } from './material/list-material/list-material.co
 import { AddMaterialComponent } from './material/add-material/add-material.component';
 import { EditMaterialComponent } from './material/edit-material/edit-material.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddSalesOrderComponent } from './sales-order/add-sales-order/add-sales-order/add-sales-order.component';
+import { EditSalesOrderComponent } from './sales-order/edit-sales-order/edit-sales-order/edit-sales-order.component';
+import { ListSalesOrderComponent } from './sales-order/list-sales-order/list-sales-order/list-sales-order.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     EditCustomerComponent,
     ListMaterialComponent,
     AddMaterialComponent,
-    EditMaterialComponent
+    EditMaterialComponent,
+    AddSalesOrderComponent,
+    EditSalesOrderComponent,
+    ListSalesOrderComponent
   ],
   imports: [
     BrowserModule,

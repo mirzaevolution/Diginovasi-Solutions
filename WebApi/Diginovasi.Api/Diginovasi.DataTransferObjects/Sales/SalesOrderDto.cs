@@ -11,6 +11,13 @@ namespace Diginovasi.DataTransferObjects.Sales
         public string NoCustomer { get; set; }
         public string NamaCustomer { get; set; }
         public decimal Total { get; set; }
+        public TanggalStructDto TanggalStruct { get; set; }
 
+    }
+    public class TanggalStructDto
+    {
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
     }
 }

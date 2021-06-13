@@ -14,5 +14,12 @@ namespace Diginovasi.Api.Models.Sales
         public string NoCustomer { get; set; }
         public string NamaCustomer { get; set; }
         public decimal Total { get; set; }
+        public TanggalStructRequest TanggalStruct { get; set; }
+    }
+    public class TanggalStructRequest
+    {
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
     }
 }
